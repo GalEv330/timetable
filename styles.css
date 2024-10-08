@@ -1,0 +1,106 @@
+/* עיצוב בסיסי לדף */
+body {
+    font-family: Calibri, sans-serif;
+    margin: 20px;
+    background-color: #f4f8f9;
+}
+
+/* כותרת */
+h1 {
+    text-align: center;
+    color: hsl(168, 71%, 33%);
+    text-shadow: 1px 3px 1.5px hwb(168 1% 65%);
+    font-size: 35px;
+}
+
+/* עיצוב הטבלה */
+#styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 17px;
+    text-align: center;
+    border: 1px solid #dddddd;
+    box-shadow: 0 0 10px hwb(168 1% 65%);
+}
+
+/* עיצוב עבור תא בטבלה */
+#styled-table td {
+    padding: 12px 15px;
+}
+
+/* עיצוב עבור כותרת העמודה */
+#styled-table th {
+    padding: 12px 15px;
+}
+
+#styled-table thead tr {
+    /* background-color: #009879; */
+    background: linear-gradient(to right, #009879, hsl(197, 17%, 76%));
+    color: #ffffff;
+    text-align: center;   
+}
+
+/* עיצוב עבור כל שורה בטבלה */
+#styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+/* עיצוב רקע עבור שורה זוגית */
+#styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+/* כותרת זה TR ,עיצוב עבור כותרת העמודה (שעות) */
+#styled-table td:nth-child(6) {
+    border-left: 1px solid #009879; /* צבע הגבול הימני */
+    border-right: 1px solid #009879; /* צבע הגבול הימני */
+}
+
+/* עיצוב גבולות עבור שורה אחרונה */
+#styled-table tbody tr:last-of-type {
+    border-bottom: 1px solid #009879;
+}
+
+/* עיצוב גבולות עבור עמודה ראשונה */
+#styled-table tbody td:first-of-type {
+    border-left: 1px solid #009879(17, 69%, 54%);
+}
+
+/* עיצוב רקע עבור שורה נבחרת - כשהעכבר מעליה */
+#styled-table tbody tr:hover {
+    background-color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* עיצוב טבלה עם גבולות */
+#styled-table th, #styled-table td {
+    border: 1px solid #ddd;
+}
+
+/* שינוי גודל טקסט בתגובה לרוחב המסך */
+@media (max-width: 600px) {
+    #styled-table {
+        font-size: 14px;
+    }
+}
+
+/* עיצוב כפתור */
+button {
+    padding: 10px 20px; /* ריווח פנימי */
+    font-size: 16px; /* גודל טקסט */
+    color: #000000; /* צבע טקסט */
+    background-color: #f1f6f8; /* צבע רקע */
+    border: 2px solid #009879; /* קו גבול */
+    border-radius: 5px; /* פינות מעוגלות */
+    cursor: pointer; /* מחוון לעכבר */
+    transition: background-color 0.3s, border-color 0.3s; /* אנימציה */
+}
+
+/* עיצוב כשמרחפים מעל הכפתור */
+button:hover {
+    background-color: hwb(182 8% 60%); /* שינוי צבע רקע */
+    border-color: #000000; /* שינוי צבע גבול */
+    color: #ffffff;
+}
